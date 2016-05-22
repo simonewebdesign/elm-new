@@ -1,8 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 
-cp src/Main.elm .
+cp -R /usr/local/share/elm-new/* .
 
-echo "Your Elm project has been created successfully."
-echo "You can use `elm` to compile it, test it, and more.\n"
-echo "    elm make src/Main.elm\n"
-echo "Run `elm` for more commands."
+tree . 2>/dev/null
+
+printf "\nYour Elm program has been created successfully.\n"
+printf "You can use \"elm\" to compile it:\n\n"
+printf "    elm make src/Main.elm\n\n"
+printf "Run \"elm\" for more commands.\n\n"
