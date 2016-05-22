@@ -1,0 +1,8 @@
+#!/bin/sh
+
+cp src/Main.elm .
+
+echo "Your Elm project has been created successfully."
+echo "You can use `elm` to compile it, test it, and more.\n"
+echo "    elm make src/Main.elm\n"
+echo "Run `elm` for more commands."
