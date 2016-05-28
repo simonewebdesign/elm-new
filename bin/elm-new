@@ -5,6 +5,6 @@ cp -R /usr/local/share/elm-new/* .
 tree . 2>/dev/null
 
 printf "\nYour Elm program has been created successfully.\n"
-printf "You can use \"elm\" to compile it:\n\n"
-printf "    elm make src/Main.elm\n\n"
+printf "You can use \"elm-make\" to compile it:\n\n"
+printf "    elm-make src/Main.elm\n\n"
 printf "Run \"elm\" for more commands.\n\n"
