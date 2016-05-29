@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cp -RT /usr/local/share/elm-new .
+cp -RT "${0%/*}/../share/elm-new" .
 
 tree -a . 2>/dev/null
 
