@@ -19,11 +19,12 @@ $ cd my-elm-project
 $ elm new
 .
 ├── elm-package.json
+├── .gitignore
 ├── README.md
 └── src
     └── Main.elm
 
-1 directory, 3 files
+1 directory, 4 files
 
 Your Elm program has been created successfully.
 You can use "elm-make" to compile it:

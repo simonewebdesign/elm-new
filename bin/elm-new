@@ -1,8 +1,8 @@
 #!/bin/bash
 
-cp -R /usr/local/share/elm-new/* .
+cp -RT /usr/local/share/elm-new .
 
-tree . 2>/dev/null
+tree -a . 2>/dev/null
 
 printf "\nYour Elm program has been created successfully.\n"
 printf "You can use \"elm-make\" to compile it:\n\n"
