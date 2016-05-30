@@ -1,10 +1,62 @@
 #!/bin/bash
 
-cp -RT "${0%/*}/../share/elm-new" .
+# cp -RT "${0%/*}/../share/elm-new" .
+# tree -a . 2>/dev/null
 
-tree -a . 2>/dev/null
+function success {
+  printf "\nYour Elm program has been created successfully.\n"
+  printf "You can use \"elm-make\" to compile it:\n\n"
+  printf "    elm-make src/Main.elm\n\n"
+  printf "Run \"elm\" for more commands.\n\n"
+}
 
-printf "\nYour Elm program has been created successfully.\n"
-printf "You can use \"elm-make\" to compile it:\n\n"
-printf "    elm-make src/Main.elm\n\n"
-printf "Run \"elm\" for more commands.\n\n"
+beginner=0
+path=""
+
+for arg in "$@"; do
+  case $arg in
+
+    # Print help
+    -h|--help)
+      echo "usage: elm-new [-V|--version] [-h|--help] [-b|--beginner] [path]"
+      exit
+      ;;
+
+    # Print version
+    -V|--version)
+      echo "0.2.0"
+      exit
+      ;;
+
+    # Set flag for generating a beginnerProgram
+    -b|--beginner)
+      beginner=1
+      shift
+      ;;
+
+    # Unknown
+    -*)
+      echo "unknown flag: $arg"
+      exit 1
+      ;;
+
+    # Set flag for generating in specified path
+    *)
+      path="$1"
+      shift
+      ;;
+  esac
+done
+
+# if [ -n "$path" ] ; then
+#   echo "path is not empty: $path"
+# fi
+
+
+# if [ "$beginner" = 1 ] ; then
+#   echo generated beginner successfully.
+#   # success
+# else
+#   echo generated successfully.
+#   # success
+# fi
