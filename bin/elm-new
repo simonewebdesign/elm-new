@@ -1,17 +1,9 @@
 #!/bin/bash
 
-# cp -RT "${0%/*}/../share/elm-new" .
-# tree -a . 2>/dev/null
-
-function success {
-  printf "\nYour Elm program has been created successfully.\n"
-  printf "You can use \"elm-make\" to compile it:\n\n"
-  printf "    elm-make src/Main.elm\n\n"
-  printf "Run \"elm\" for more commands.\n\n"
-}
-
+base="${0%/*}/../share/elm-new"
 beginner=0
-path=""
+path="."
+
 
 for arg in "$@"; do
   case $arg in
@@ -36,7 +28,7 @@ for arg in "$@"; do
 
     # Unknown
     -*)
-      echo "unknown flag: $arg"
+      echo "unknown option: $arg"
       exit 1
       ;;
 
@@ -48,15 +40,21 @@ for arg in "$@"; do
   esac
 done
 
-# if [ -n "$path" ] ; then
-#   echo "path is not empty: $path"
-# fi
+
+cp -R "$base/" $path
 
 
-# if [ "$beginner" = 1 ] ; then
-#   echo generated beginner successfully.
-#   # success
-# else
-#   echo generated successfully.
-#   # success
-# fi
+if [ "$beginner" = 1 ] ; then
+  mv "$path/src/MainBeginner.elm" "$path/src/Main.elm"
+else
+  rm "$path/src/MainBeginner.elm"
+fi
+
+
+tree -a $path 2>/dev/null
+
+
+printf "\nYour Elm program has been created successfully.\n"
+printf "You can use \"elm-make\" to compile it:\n\n"
+printf "    elm-make src/Main.elm\n\n"
+printf "Run \"elm\" for more commands.\n\n"
