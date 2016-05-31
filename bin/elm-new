@@ -16,7 +16,7 @@ for arg in "$@"; do
 
     # Print version
     -V|--version)
-      echo "0.2.0"
+      echo "1.0.0"
       exit
       ;;
 
