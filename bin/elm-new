@@ -4,40 +4,33 @@ base="${0%/*}/../share/elm-new"
 beginner=0
 path="."
 
-
 for arg in "$@"; do
   case $arg in
 
-    # Print help
     -h|--help)
       echo "usage: elm-new [-V|--version] [-h|--help] [-b|--beginner] [path]"
       exit
       ;;
 
-    # Print version
     -V|--version)
       echo "1.0.0"
       exit
       ;;
 
-    # Set flag for generating a beginnerProgram
     -b|--beginner)
       beginner=1
       shift
       ;;
 
-    # Unknown
     -*)
       echo "elm-new: illegal option -- $arg"
       elm-new --help
       exit 1
       ;;
 
-    # Set flag for generating in specified path
     *)
       path="$1"
       shift
-      ;;
   esac
 done
 
