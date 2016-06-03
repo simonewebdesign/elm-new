@@ -28,7 +28,8 @@ for arg in "$@"; do
 
     # Unknown
     -*)
-      echo "unknown option: $arg"
+      echo "elm-new: illegal option -- $arg"
+      elm-new --help
       exit 1
       ;;
 
