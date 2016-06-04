@@ -23,8 +23,8 @@ for arg in "$@"; do
       ;;
 
     -*)
-      echo "elm-new: illegal option -- $arg"
-      elm-new --help
+      >&2 echo "elm-new: illegal option -- $arg"
+      >&2 elm-new --help
       exit 1
       ;;
 
