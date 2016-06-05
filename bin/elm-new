@@ -35,7 +35,7 @@ for arg in "$@"; do
 done
 
 
-cp -R "$base/" $path
+cp -R "$base/" "$path"
 
 
 if [ "$beginner" = 1 ] ; then
@@ -45,7 +45,7 @@ else
 fi
 
 
-tree -a $path 2>/dev/null
+tree -a "$path" 2>/dev/null
 
 
 printf "\nYour Elm program has been created successfully.\n"
