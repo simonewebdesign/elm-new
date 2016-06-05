@@ -1,6 +1,5 @@
 #!/bin/bash
 
-base="${0%/*}/../share/elm-new"
 beginner=0
 path="."
 
@@ -35,7 +34,8 @@ for arg in "$@"; do
 done
 
 
-cp -R "$base/" "$path"
+mkdir -p "$path"
+cp -R "${0%/*}/../share/elm-new/". "$path"
 
 
 if [ "$beginner" = 1 ] ; then
