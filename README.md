@@ -5,9 +5,9 @@ An unopinionated tool for initializing an Elm 0.17 project. Inspired by `mix new
 ## Installation
 
 ```
-curl https://codeload.github.com/simonewebdesign/elm-new/tar.gz/v1.0.0 > elm-new.tar.gz
+curl https://codeload.github.com/simonewebdesign/elm-new/tar.gz/v1.0.1 > elm-new.tar.gz
 tar -zxf elm-new.tar.gz
-cd elm-new-1.0.0
+cd elm-new-1.0.1
 sudo make install
 ```
 
