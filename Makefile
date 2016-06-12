@@ -1,4 +1,4 @@
-DIRS=bin share
+DIRS=bin man share
 INSTALL_DIRS=`find $(DIRS) -type d 2>/dev/null`
 INSTALL_FILES=`find $(DIRS) -type f 2>/dev/null`
 
