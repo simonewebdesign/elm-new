@@ -1,13 +1,13 @@
 #!/bin/bash
 
-beginner=0
+choice=0
 path="."
 
 for arg in "$@"; do
   case $arg in
 
     -h|--help)
-      echo "usage: elm-new [-V|--version] [-h|--help] [-b|--beginner] [path]"
+      echo "usage: elm-new [-V|--version] [-h|--help] [-b|--beginner] [--hello-world] [path]"
       exit
       ;;
 
@@ -17,7 +17,12 @@ for arg in "$@"; do
       ;;
 
     -b|--beginner)
-      beginner=1
+      choice=1
+      shift
+      ;;
+
+    --hello-world)
+      choice=2
       shift
       ;;
 
@@ -38,11 +43,18 @@ mkdir -p "$path"
 cp -R "${0%/*}/../share/elm-new/". "$path"
 
 
-if [ "$beginner" = 1 ] ; then
-  mv "$path/src/MainBeginner.elm" "$path/src/Main.elm"
-else
-  rm "$path/src/MainBeginner.elm"
-fi
+case $choice in
+  0)
+    rm "$path/src/Main*.elm"
+    ;;
+  1)
+    mv "$path/src/MainBeginner.elm" "$path/src/Main.elm"
+    rm "$path"/src/Main[A-Za-z]*.elm
+    ;;
+  2)
+    mv "$path/src/MainHelloWorld.elm" "$path/src/Main.elm"
+    rm "$path"/src/Main[A-Za-z]*.elm
+esac
 
 
 tree -a "$path" 2>/dev/null
