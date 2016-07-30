@@ -1,6 +1,6 @@
 # elm-new
 
-An unopinionated tool for initializing an Elm 0.17 project. Inspired by `mix new` and `rails new`.
+A CLI tool that generates a file hierarchy for starting a new Elm project. Inspired by `mix new` and `rails new`.
 
 ## Installation
 
@@ -31,3 +31,5 @@ You can use "elm-make" to compile it:
 
 Run "elm" for more commands.
 ```
+
+Run the test suite with `make test`.

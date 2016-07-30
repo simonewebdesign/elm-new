@@ -11,4 +11,7 @@ install:
 uninstall:
 	for file in $(INSTALL_FILES); do rm -f $(DESTDIR)$(PREFIX)/$$file; done
 
-.PHONY: install uninstall
+test:
+	./test.sh
+
+.PHONY: install uninstall test
