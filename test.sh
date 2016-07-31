@@ -8,6 +8,7 @@ function ok {
 
 function fail {
   echo -e " \e[31mFAIL\e[0m"
+  exit_status=1
 }
 
 # Print test title
@@ -126,3 +127,5 @@ test "It's a 'Hello world' program"
 if grep --quiet "Hello, World!" src/Main.elm; then ok; else fail; fi
 
 clean
+
+exit $exit_status
