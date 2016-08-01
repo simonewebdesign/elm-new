@@ -44,18 +44,14 @@ cp -R "${0%/*}/../share/elm-new/". "$path"
 
 
 case $choice in
-  0)
-    rm "$path"/src/Main[A-Za-z]*.elm
-    ;;
   1)
     mv "$path/src/MainBeginner.elm" "$path/src/Main.elm"
-    rm "$path"/src/Main[A-Za-z]*.elm
     ;;
   2)
     mv "$path/src/MainHelloWorld.elm" "$path/src/Main.elm"
-    rm "$path"/src/Main[A-Za-z]*.elm
 esac
 
+rm "$path"/src/Main[A-Z]*.elm
 
 tree -a "$path" 2>/dev/null
 
