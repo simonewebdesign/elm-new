@@ -38,7 +38,7 @@ test "prints help (-h|--help)"
 if [[ $($cli -h) == "usage:"* ]]; then ok; else fail; fi
 
 test "prints version (-V|--version)"
-if [ "$($cli -V)" == "1.1.0" ]; then ok; else fail; fi
+if [ "$($cli -V)" == "1.1.1" ]; then ok; else fail; fi
 
 sandbox
 debug "Running $cli with no args..."
