@@ -56,7 +56,11 @@ rm "$path"/src/Main[A-Z]*.elm
 tree -a "$path" 2>/dev/null
 
 
-printf "\nYour Elm program has been created successfully.\n"
-printf "You can use \"elm-make\" to compile it:\n\n"
-printf "    elm-make src/Main.elm\n\n"
-printf "Run \"elm\" for more commands.\n\n"
+echo '
+Your Elm program has been created successfully.
+You can use "elm-make" to compile it:
+
+    elm-make src/Main.elm
+
+Run "elm" for more commands.
+'
