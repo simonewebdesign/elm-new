@@ -3,11 +3,11 @@
 cli=bin/elm-new
 
 function ok {
-  echo -e " \e[32m✓\e[0m"
+  echo -e ' \033[32m✓\033[0m'
 }
 
 function fail {
-  echo -e " \e[31mFAIL\e[0m"
+  echo -e ' \033[31mFAIL\033[0m'
   exit_status=1
 }
 
@@ -18,7 +18,7 @@ function test {
 
 # Print debug info
 function debug {
-  echo -e "\n\e[2m*** $1\e[0m"
+  echo -e "\n\033[2m*** $1\033[0m"
 }
 
 # Create a sandbox folder to run the tests in isolation
