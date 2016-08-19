@@ -2,12 +2,13 @@
 
 choice=0
 path="."
+synopsis="usage: elm-new [-V|--version] [-h|--help] [-b|--beginner] [--hello-world] [path]"
 
 for arg in "$@"; do
   case $arg in
 
     -h|--help)
-      echo "usage: elm-new [-V|--version] [-h|--help] [-b|--beginner] [--hello-world] [path]"
+      echo $synopsis
       exit
       ;;
 
@@ -27,8 +28,8 @@ for arg in "$@"; do
       ;;
 
     -*)
-      >&2 echo "elm-new: illegal option -- $arg"
-      >&2 elm-new --help
+      >&2 echo "elm-new: illegal option $arg"
+      echo $synopsis
       exit 1
       ;;
 
