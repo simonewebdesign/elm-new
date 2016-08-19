@@ -14,28 +14,13 @@ Sometimes the [Elm REPL](https://github.com/elm-lang/elm-repl) is enough, but ot
 
 ## Installation
 
-Open a terminal and run:
+For Linux and Mac, open a terminal and run:
 
     curl https://raw.githubusercontent.com/simonewebdesign/elm-new/master/install.sh | sh
 
-#### Advanced: installing in a custom directory (staged install)
+It will ask for root privileges (i.e. sudo password). If you have specific needs, for example you want to install to a location where you don't need root permission, check [INSTALL.md](https://raw.githubusercontent.com/simonewebdesign/elm-new/master/INSTALL.md).
 
-elm-new would normally install itself in `/usr/local/bin/elm-new`. If you want to install to a different path, for example say `/tmp/elm`, you can do:
-
-    make DESTDIR=/tmp/elm install
-
-You would then find elm-new under `/tmp/elm/usr/local/bin`.
-
-It is also possible to customize the prefix (`/usr/local` by default). For example:
-
-    make PREFIX=~/opt install
-
-The above would install elm-new under `~/opt/bin`.
-
-In any case, if you wish to simply run `elm-new` without specifying the full path, you need to add the bin folder to `$PATH`. For example, if you're using bash:
-
-    echo 'PATH=~/opt/bin:$PATH' >> ~/.bashrc
-    . ~/.bashrc
+Windows is not supported yet - hopefully it will be very soon!
 
 ## Usage
 
