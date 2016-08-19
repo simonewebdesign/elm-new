@@ -14,12 +14,9 @@ Sometimes the [Elm REPL](https://github.com/elm-lang/elm-repl) is enough, but ot
 
 ## Installation
 
-```bash
-curl https://codeload.github.com/simonewebdesign/elm-new/tar.gz/v1.1.1 > elm-new.tar.gz
-tar -zxf elm-new.tar.gz
-cd elm-new-1.1.1
-sudo make install
-```
+Open a terminal and run:
+
+    curl https://raw.githubusercontent.com/simonewebdesign/elm-new/master/install.sh | sh
 
 #### Advanced: installing in a custom directory (staged install)
 
