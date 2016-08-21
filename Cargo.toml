@@ -1,0 +1,6 @@
+[package]
+name = "elm-new"
+version = "0.1.0"
+authors = ["Simone Vittori <hi+elm-new@simonewebdesign.it>"]
+
+[dependencies]
