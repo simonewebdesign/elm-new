@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cli=bin/elm-new
+cli=target/debug/elm-new
 
 function ok {
   echo -e ' \033[32m✓\033[0m'
@@ -34,11 +34,17 @@ function clean {
 
 echo Running test suite...
 
-test "prints help (-h|--help)"
+test "prints help (-h)"
 if [[ $($cli -h) == "usage:"* ]]; then ok; else fail; fi
 
-test "prints version (-V|--version)"
+test "prints help (--help)"
+if [[ $($cli --help) == "usage:"* ]]; then ok; else fail; fi
+
+test "prints version (-V)"
 if [ "$($cli -V)" == "1.1.1" ]; then ok; else fail; fi
+
+test "prints version (--version)"
+if [ "$($cli --version)" == "1.1.1" ]; then ok; else fail; fi
 
 echo When invalid arg provided,
 test "    prints to stderr"
