@@ -1,4 +1,9 @@
-#### Advanced: installing in a custom directory (staged install)
+## Installing from source
+
+1. Either clone this repository or download a release from the releases page.
+2. `cd` in the folder and run `sudo make install`.
+
+### Installing in a custom directory (staged install)
 
 elm-new would normally install itself in `/usr/local/bin/elm-new`. If you want to install to a different path, for example say `/tmp/elm`, you can do:
 
