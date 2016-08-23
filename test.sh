@@ -53,6 +53,9 @@ if [[ "$($cli --badarg 2>&1)" =~ "elm-new: illegal option --badarg" ]]; then ok;
 test "    prints synopsis to stdout"
 if [[ "$($cli --badarg 2>/dev/null)" =~ "usage:" ]]; then ok; else fail; fi
 
+test "    exits with error"
+if ! $cli --badarg >/dev/null 2>&1; then ok; else fail; fi
+
 
 sandbox
 debug "Running $cli with no args..."
