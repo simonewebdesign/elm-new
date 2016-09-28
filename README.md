@@ -1,4 +1,4 @@
-# elm new [[![Travis branch](https://img.shields.io/travis/simonewebdesign/elm-new/master.svg?maxAge=2592000)]()](https://travis-ci.org/simonewebdesign/elm-new)
+# elm new [![Build Status](https://travis-ci.org/simonewebdesign/elm-new.svg?branch=master)](https://travis-ci.org/simonewebdesign/elm-new)
 
 A CLI tool that **generates a file hierarchy for starting a new Elm project**. Same as `mix new`, `rails new`, `lein new` etc.
 
