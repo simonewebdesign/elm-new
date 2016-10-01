@@ -14,6 +14,6 @@ uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/elm-new
 
 test:
-	./test.sh
+	./test.sh bin/elm-new
 
 .PHONY: install uninstall test

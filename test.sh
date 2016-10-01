@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cli=bin/elm-new
+cli=$1
 
 function ok {
   echo -e ' \033[32m✓\033[0m'
