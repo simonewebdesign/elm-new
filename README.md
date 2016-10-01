@@ -12,9 +12,12 @@ The idea is to be able to **start coding right away** instead of wasting time wi
 
 ## Installation
 
-For **Linux** and **Mac**, open a terminal and run:
+For **Linux**, **Mac** and **Windows** (MinGW), open a terminal and run:
 
     curl https://raw.githubusercontent.com/simonewebdesign/elm-new/master/install.sh | sh
+
+For other installation options, see [here](https://github.com/simonewebdesign/elm-new/blob/master/INSTALL.md).
+
 
 ## Usage
 

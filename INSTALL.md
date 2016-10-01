@@ -21,3 +21,19 @@ In any case, if you wish to simply run `elm-new` without specifying the full pat
 
     echo 'PATH=~/opt/bin:$PATH' >> ~/.bashrc
     . ~/.bashrc
+
+
+## Windows (cmd.exe, MinGW, Cygwin, PowerShell)
+
+You don't need to clone or download this repo. Just open cmd.exe and run:
+
+    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/simonewebdesign/elm-new/master/install.bat', '%temp%\install.bat')"
+    %temp%\install.bat
+
+It will install the tool under `C:\Tools\elm-new`. If you want to just call the tool without specifying the full path, you need to add that path in your your PATH environment variable: here's a [guide](http://www.computerhope.com/issues/ch000549.htm).
+
+The tool will also just work on *MinGW*; it can be installed normally as described in the [README](https://github.com/simonewebdesign/elm-new#installation), or from source (see above).
+
+You should be able to install it on *Cygwin* too if you have `make`. Here's [how to get `make`](http://superuser.com/questions/154418/where-do-i-get-make-for-cygwin).
+
+If you're on Windows 10, whether you're using *PowerShell* or not, I'd highly recommend upgrading to the Anniversary Update: see [this page](https://msdn.microsoft.com/en-gb/commandline/wsl/about).
