@@ -2,21 +2,13 @@
 
 A CLI tool that **generates a file hierarchy for starting a new Elm project**. Same as `mix new`, `rails new`, `lein new` etc.
 
-The idea is to be able to **start coding right away** instead of wasting time with the initial boilerplate. This is especially useful if you do a lot of prototyping.
+The idea is to be able to start coding right away instead of wasting time with the initial boilerplate. This is especially useful if you do a lot of prototyping.
 
 ## Features
 
 - **Extremely lightweight** – less than 1kB
 - **No dependencies** – all you need is Bash
 - **Simple to install** and use
-
-## Installation
-
-For **Linux**, **Mac**, and **Windows**, open a terminal and run:
-
-    curl https://raw.githubusercontent.com/simonewebdesign/elm-new/master/install.sh | sh
-
-For other installation options, see [here](https://github.com/simonewebdesign/elm-new/blob/master/INSTALL.md).
 
 ## Usage
 
@@ -50,6 +42,14 @@ You can use "elm-make" to compile it:
 
 Run "elm" for more commands.
 ```
+
+## Installation
+
+For **Linux**, **Mac**, and **Windows**, open a terminal and run:
+
+    curl https://raw.githubusercontent.com/simonewebdesign/elm-new/master/install.sh | sh
+
+For other installation options, see [here](https://github.com/simonewebdesign/elm-new/blob/master/INSTALL.md).
 
 ---
 
