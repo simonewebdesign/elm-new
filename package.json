@@ -1,0 +1,25 @@
+{
+  "name": "elm-new",
+  "version": "1.1.2",
+  "description": "Generates a project scaffolding for rapid prototyping of Elm apps.",
+  "main": "index.js",
+  "bin": {
+    "elm-new": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonewebdesign/elm-new.git"
+  },
+  "keywords": [
+    "elm",
+    "new",
+    "init",
+    "cli"
+  ],
+  "author": "Simone Vittori <hello+npm@simonewebdesign.it>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simonewebdesign/elm-new/issues"
+  },
+  "homepage": "https://github.com/simonewebdesign/elm-new#readme"
+}
