@@ -49,6 +49,10 @@ For **Linux**, **Mac**, and **Windows**, open a terminal and run:
 
     curl https://raw.githubusercontent.com/simonewebdesign/elm-new/master/install.sh | sh
 
+#### From npm
+
+    npm install -g elm-new
+
 For other installation options, see [here](https://github.com/simonewebdesign/elm-new/blob/master/INSTALL.md).
 
 ---
