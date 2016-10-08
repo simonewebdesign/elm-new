@@ -1,9 +1,12 @@
 #!/usr/bin/env node
 
-const spawn = require('child_process').spawnSync
-const cli = require('os').platform() === 'win32' ? 'elm-new.bat' : 'bin/elm-new'
-const cmd = spawn(cli, process.argv.slice(2))
+spawn = require('child_process').spawnSync
+cli = require('os').platform() === 'win32' ? __dirname + '/elm-new.bat' : __dirname + '/bin/elm-new'
+cmd = spawn(cli, process.argv.slice(2))
 
-if (cmd.stderr) console.error(cmd.stderr.toString())
-if (cmd.stdout) console.log(cmd.stdout.toString())
-if (cmd.stderr) process.exit(1)
+stderr = cmd.stderr.toString()
+stdout = cmd.stdout.toString()
+
+if (stderr !== '') console.error(stderr)
+if (stdout !== '') console.log(stdout)
+if (stderr !== '') process.exit(1)
