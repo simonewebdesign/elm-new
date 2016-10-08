@@ -4,17 +4,17 @@ echo Initializing...
 mkdir C:\Tools\elm-new
 
 echo Downloading...
-powershell -Command "(New-Object Net.WebClient).DownloadFile('https://codeload.github.com/simonewebdesign/elm-new/zip/v1.1.1a', 'C:\Tools\elm-new\elm-new.zip')"
+powershell -Command "(New-Object Net.WebClient).DownloadFile('https://codeload.github.com/simonewebdesign/elm-new/zip/v1.1.2', 'C:\Tools\elm-new\elm-new.zip')"
 
 echo Extracting...
 call :unzip "C:\Tools\elm-new" "C:\Tools\elm-new\elm-new.zip"
 
 echo Installing...
-robocopy C:\Tools\elm-new\elm-new-1.1.1a C:\Tools\elm-new /e >nul 2>&1
+robocopy C:\Tools\elm-new\elm-new-1.1.2 C:\Tools\elm-new /e >nul 2>&1
 
 echo Cleaning...
 del C:\Tools\elm-new\elm-new.zip
-rmdir /s /q C:\Tools\elm-new\elm-new-1.1.1a
+rmdir /s /q C:\Tools\elm-new\elm-new-1.1.2
 
 echo Done!
 exit /b

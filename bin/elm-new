@@ -13,7 +13,7 @@ for arg in "$@"; do
       ;;
 
     -V|--version)
-      echo "1.1.1a"
+      echo "1.1.2"
       exit
       ;;
 
