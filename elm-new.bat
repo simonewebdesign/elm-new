@@ -18,11 +18,11 @@ for %%a in (%*) do (
         exit /b
 
     ) else if %%a == --version (
-        echo 1.1.3
+        echo 1.2.0
         exit /b
 
     ) else if %%a == -V (
-        echo 1.1.3
+        echo 1.2.0
         exit /b
 
     ) else if %%a == --beginner (
