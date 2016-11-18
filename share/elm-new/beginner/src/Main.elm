@@ -1,5 +1,3 @@
-module Main exposing (..)
-
 import Html exposing (..)
 --import Html.Attributes exposing (..)
 --import Html.Events exposing (onClick)
@@ -7,11 +5,10 @@ import Html exposing (..)
 
 main : Program Never Model Msg
 main =
-    Html.program
-        { init = init
+    Html.beginnerProgram
+        { model = initialModel
         , view = view
         , update = update
-        , subscriptions = subscriptions
         }
 
 
@@ -28,11 +25,6 @@ initialModel =
     {}
 
 
-init : ( Model, Cmd Msg )
-init =
-    ( initialModel, Cmd.none )
-
-
 
 -- UPDATE
 
@@ -41,20 +33,11 @@ type Msg
     = NoOp
 
 
-update : Msg -> Model -> ( Model, Cmd Msg )
+update : Msg -> Model -> Model
 update msg model =
     case msg of
         NoOp ->
-            ( model, Cmd.none )
-
-
-
--- SUBSCRIPTIONS
-
-
-subscriptions : Model -> Sub Msg
-subscriptions model =
-    Sub.none
+            model
 
 
 
