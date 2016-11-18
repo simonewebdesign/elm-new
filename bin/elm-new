@@ -2,7 +2,9 @@
 
 choice=default
 path=.
-synopsis="usage: elm-new [-V|--version] [-h|--help] [-b|--beginner] [--hello-world] [path]"
+synopsis='usage: elm-new [path] [-b|--beginner] [--hello-world] [--navigation]
+                         [-h|--help] [-V|--version]
+'
 
 for arg in "$@"; do
   case $arg in

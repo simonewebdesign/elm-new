@@ -1,4 +1,4 @@
-.Dd June 12, 2016
+.Dd November 18, 2016
 .Dt ELM-NEW 1
 .Os
 .Sh NAME
@@ -6,22 +6,24 @@
 .Nd generate a file hierarchy for a new Elm project
 .Sh SYNOPSIS
 .Nm
-.Op Fl b | Fl h | Fl V
 .Op Ar path
+.Op Fl b | Fl h | Fl V
 .Sh DESCRIPTION
 The
 .Nm
 utility creates a directory tree in the provided
 .Ar path
 , or in the current directory by default.
-The generated project will be using Html.App.program
+The generated project will be using Html.program
 if no options provided.
 .Sh OPTIONS
 .Bl -tag -width indent
 .It Fl b, -beginner
-Generates a new Elm program using Html.App.beginnerProgram.
+Generates an Elm program using Html.beginnerProgram.
 .It Fl -hello-world
 Generates an Elm program that prints "Hello, world!".
+.It Fl -navigation
+Generates an Elm program using Navigation.program from elm-lang/navigation.
 .It Fl h, -help
 Prints the synopsis.
 .It Fl V, -version
