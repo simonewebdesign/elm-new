@@ -1,9 +1,10 @@
 import Html exposing (..)
 import Html.Attributes exposing (..)
-import Html.Events exposing (..)
+--import Html.Events exposing (..)
 import Navigation
 
 
+main : Program Never Model Msg
 main =
     Navigation.program UrlChange
         { init = init
