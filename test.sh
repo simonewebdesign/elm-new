@@ -76,12 +76,6 @@ if [ -d src ]; then ok; else fail; fi
 test "src/Main.elm exists"
 if [ -f src/Main.elm ]; then ok; else fail; fi
 
-test "src/MainBeginner.elm does not exist"
-if [ ! -f src/MainBeginner.elm ]; then ok; else fail; fi
-
-test "src/MainHelloWorld.elm does not exist"
-if [ ! -f src/MainHelloWorld.elm ]; then ok; else fail; fi
-
 test "It's an Html.program"
 if grep --quiet Html.program src/Main.elm; then ok; else fail; fi
 
@@ -105,12 +99,6 @@ if [ -d src ]; then ok; else fail; fi
 
 test "src/Main.elm exists"
 if [ -f src/Main.elm ]; then ok; else fail; fi
-
-test "src/MainBeginner.elm does not exist"
-if [ ! -f src/MainBeginner.elm ]; then ok; else fail; fi
-
-test "src/MainHelloWorld.elm does not exist"
-if [ ! -f src/MainHelloWorld.elm ]; then ok; else fail; fi
 
 test "It's an Html.beginnerProgram"
 if grep --quiet Html.beginnerProgram src/Main.elm; then ok; else fail; fi
@@ -136,12 +124,6 @@ if [ -d src ]; then ok; else fail; fi
 test "src/Main.elm exists"
 if [ -f src/Main.elm ]; then ok; else fail; fi
 
-test "src/MainBeginner.elm does not exist"
-if [ ! -f src/MainBeginner.elm ]; then ok; else fail; fi
-
-test "src/MainHelloWorld.elm does not exist"
-if [ ! -f src/MainHelloWorld.elm ]; then ok; else fail; fi
-
 test "It's a 'Hello world' program"
 if grep --quiet "Hello, World!" src/Main.elm; then ok; else fail; fi
 
@@ -166,44 +148,32 @@ if [ -d somepath/src ]; then ok; else fail; fi
 test "src/Main.elm exists"
 if [ -f somepath/src/Main.elm ]; then ok; else fail; fi
 
-test "src/MainBeginner.elm does not exist"
-if [ ! -f somepath/src/MainBeginner.elm ]; then ok; else fail; fi
-
-test "src/MainHelloWorld.elm does not exist"
-if [ ! -f somepath/src/MainHelloWorld.elm ]; then ok; else fail; fi
-
 test "It's an Html.beginnerProgram"
 if grep --quiet Html.beginnerProgram somepath/src/Main.elm; then ok; else fail; fi
 
 
 clean
 sandbox
-debug "Running $cli somepath --navigation..."
-../$cli somepath --navigation >/dev/null
+debug "Running $cli --navigation nav..."
+../$cli --navigation nav >/dev/null
 
 test "elm-package.json exists"
-if [ -f somepath/elm-package.json ]; then ok; else fail; fi
+if [ -f nav/elm-package.json ]; then ok; else fail; fi
 
 test "README.md exists"
-if [ -f somepath/README.md ]; then ok; else fail; fi
+if [ -f nav/README.md ]; then ok; else fail; fi
 
 test ".gitignore exists"
-if [ -f somepath/.gitignore ]; then ok; else fail; fi
+if [ -f nav/.gitignore ]; then ok; else fail; fi
 
 test "src/ exists"
-if [ -d somepath/src ]; then ok; else fail; fi
+if [ -d nav/src ]; then ok; else fail; fi
 
 test "src/Main.elm exists"
-if [ -f somepath/src/Main.elm ]; then ok; else fail; fi
-
-test "src/MainBeginner.elm does not exist"
-if [ ! -f somepath/src/MainBeginner.elm ]; then ok; else fail; fi
-
-test "src/MainHelloWorld.elm does not exist"
-if [ ! -f somepath/src/MainHelloWorld.elm ]; then ok; else fail; fi
+if [ -f nav/src/Main.elm ]; then ok; else fail; fi
 
 test "It's a Navigation.program"
-if grep --quiet Navigation.program somepath/src/Main.elm; then ok; else fail; fi
+if grep --quiet Navigation.program nav/src/Main.elm; then ok; else fail; fi
 
 clean
 
