@@ -35,10 +35,10 @@ function clean {
 echo Running test suite...
 
 test "prints help (-h)"
-if [[ $($cli -h) == "usage:"* ]]; then ok; else fail; fi
+if [[ $($cli -h) =~ Usage: ]]; then ok; else fail; fi
 
 test "prints help (--help)"
-if [[ $($cli --help) == "usage:"* ]]; then ok; else fail; fi
+if [[ $($cli --help) =~ Usage: ]]; then ok; else fail; fi
 
 test "prints version (-V)"
 if [ "$($cli -V)" == 1.2.0 ]; then ok; else fail; fi
@@ -51,7 +51,7 @@ test "    prints to stderr"
 if [[ "$($cli --badarg 2>&1)" =~ "elm-new: illegal option --badarg" ]]; then ok; else fail; fi
 
 test "    prints synopsis to stdout"
-if [[ "$($cli --badarg 2>/dev/null)" =~ "usage:" ]]; then ok; else fail; fi
+if [[ "$($cli --badarg 2>/dev/null)" =~ Usage: ]]; then ok; else fail; fi
 
 test "    exits with error"
 if ! $cli --badarg >/dev/null 2>&1; then ok; else fail; fi

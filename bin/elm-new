@@ -2,15 +2,30 @@
 
 choice=default
 path=.
-synopsis='usage: elm-new [path] [-b|--beginner] [--hello-world] [--navigation]
-                         [-h|--help] [-V|--version]
+synopsis='
+Usage: elm-new [PATH] [OPTIONS]
+Creates a new project with the specified options. The default is Html.program.
+
+Options:
+  -b --beginner            Create an Html.beginnerProgram
+  --hello-world            Create a "Hello, world!" program
+  --navigation             Create a Navigation.program
+  -h --help                Show this help text
+  -V --version             Print version
+
+Examples:
+  elm new                        Create an Html.program in the current directory
+  elm new my-project             Create an Html.program in my-project/
+  elm new my-project --beginner  Create an Html.beginnerProgram in my-project/
+  elm new my-spa --navigation    Create a Navigation.program in my-spa/
+  elm new hello --hello-world    Create a "Hello, world!" program in hello/
 '
 
 for arg in "$@"; do
   case $arg in
 
     -h|--help)
-      echo $synopsis
+      echo "$synopsis"
       exit
       ;;
 
@@ -36,7 +51,7 @@ for arg in "$@"; do
 
     -*)
       >&2 echo "elm-new: illegal option $arg"
-      echo $synopsis
+      echo "$synopsis"
       exit 1
       ;;
 
