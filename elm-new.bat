@@ -2,7 +2,7 @@
 
 setlocal EnableDelayedExpansion
 
-set choice=0
+set choice=default
 set dest=.
 
 for %%a in (%*) do (
@@ -10,11 +10,11 @@ for %%a in (%*) do (
     set arg=%%a
 
     if %%a == --help (
-        echo usage: elm-new [-V --version] [-h --help] [-b --beginner] [--hello-world] [path]
+        echo usage: elm-new [path] [-b --beginner] [--hello-world] [--navigation] [-h --help] [-V --version]
         exit /b
 
     ) else if %%a == -h (
-        echo usage: elm-new [-V --version] [-h --help] [-b --beginner] [--hello-world] [path]
+        echo usage: elm-new [path] [-b --beginner] [--hello-world] [--navigation] [-h --help] [-V --version]
         exit /b
 
     ) else if %%a == --version (
@@ -26,17 +26,20 @@ for %%a in (%*) do (
         exit /b
 
     ) else if %%a == --beginner (
-        set choice=1
+        set choice=beginner
 
     ) else if %%a == -b (
-        set choice=1
+        set choice=beginner
 
     ) else if %%a == --hello-world (
-        set choice=2
+        set choice=hello-world
+
+    ) else if %%a == --navigation (
+        set choice=navigation
 
     ) else if "!arg:~0,1!" == "-" (
         echo elm-new: illegal option !arg! 1>&2
-        echo usage: elm-new [-V --version] [-h --help] [-b --beginner] [--hello-world] [path]
+        echo usage: elm-new [path] [-b --beginner] [--hello-world] [--navigation] [-h --help] [-V --version]
         exit /b 1
 
     ) else (
@@ -44,22 +47,7 @@ for %%a in (%*) do (
     )
 )
 
-
-robocopy %~dp0\share\elm-new "%dest%" /e >nul 2>&1
-
-if %choice% == 0 (
-    del "%dest%\src\MainBeginner.elm"
-    del "%dest%\src\MainHelloWorld.elm"
-
-) else if %choice% == 1 (
-    move "%dest%\src\MainBeginner.elm" "%dest%\src\Main.elm" >nul 2>&1
-    del "%dest%\src\MainHelloWorld.elm"
-
-) else if %choice% == 2 (
-    move "%dest%\src\MainHelloWorld.elm" "%dest%\src\Main.elm" >nul 2>&1
-    del "%dest%"\src\MainBeginner.elm
-)
-
+robocopy %~dp0\share\elm-new\%choice% "%dest%" /e >nul 2>&1
 
 echo Your Elm program has been created successfully.
 echo.

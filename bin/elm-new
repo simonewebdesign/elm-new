@@ -1,8 +1,10 @@
 #!/bin/bash
 
-choice=0
-path="."
-synopsis="usage: elm-new [-V|--version] [-h|--help] [-b|--beginner] [--hello-world] [path]"
+choice=default
+path=.
+synopsis='usage: elm-new [path] [-b|--beginner] [--hello-world] [--navigation]
+                         [-h|--help] [-V|--version]
+'
 
 for arg in "$@"; do
   case $arg in
@@ -13,17 +15,22 @@ for arg in "$@"; do
       ;;
 
     -V|--version)
-      echo "1.2.0"
+      echo 1.2.0
       exit
       ;;
 
     -b|--beginner)
-      choice=1
+      choice=beginner
       shift
       ;;
 
     --hello-world)
-      choice=2
+      choice=hello-world
+      shift
+      ;;
+
+    --navigation)
+      choice=navigation
       shift
       ;;
 
@@ -39,23 +46,10 @@ for arg in "$@"; do
   esac
 done
 
-
 mkdir -p "$path"
-cp -R "${0%/*}/../share/elm-new/". "$path"
-
-
-case $choice in
-  1)
-    mv "$path/src/MainBeginner.elm" "$path/src/Main.elm"
-    ;;
-  2)
-    mv "$path/src/MainHelloWorld.elm" "$path/src/Main.elm"
-esac
-
-rm "$path"/src/Main[A-Z]*.elm
+cp -R "${0%/*}/../share/elm-new/$choice/". "$path"
 
 tree -a "$path" 2>/dev/null
-
 
 echo '
 Your Elm program has been created successfully.

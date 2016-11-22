@@ -6,27 +6,28 @@ The idea is to be able to start coding right away instead of wasting time with t
 
 ## Features
 
-- **Extremely lightweight** – less than 1kB
-- **No dependencies** – all you need is Bash
-- **Simple to install** and use
+- **Template based** — choose between `program`, `beginnerProgram` and `Navigation.program`
+- **No dependencies** — all you need is a shell (like bash, zsh, fish, etc.)
+- **Very simple** to install and use
 
 ## Usage
 
 ```bash
-elm new                      # Initialize an Html.program in the current directory
-elm new elm-proj             # Initialize an Html.program in elm-proj/ directory
-elm new elm-proj --beginner  # Initialize an Html.beginnerProgram in elm-proj/ directory
-elm new hello --hello-world  # Generate an "Hello, world!" program in hello/ directory
-elm new --version            # Prints the installed version
-elm new --help               # Prints all possible commands
+elm new                        # Initialize an Html.program in the current directory
+elm new my-project             # Initialize an Html.program in my-project/
+elm new my-project --beginner  # Initialize an Html.beginnerProgram in my-project/
+elm new my-spa --navigation    # Initialize a Navigation.program in my-spa/
+elm new hello --hello-world    # Initialize an "Hello, world!" program in hello/
+elm new --version              # Prints the installed version
+elm new --help                 # Prints all possible commands
 ```
 
 ## Example
 
 ```
-$ elm new elm-is-cool
+$ elm new my-awesome-project
 
-elm-is-cool
+my-awesome-project
 ├── .gitignore
 ├── README.md
 ├── elm-package.json
@@ -38,6 +39,7 @@ elm-is-cool
 Your Elm program has been created successfully.
 You can use "elm-make" to compile it:
 
+    cd my-awesome-project
     elm-make src/Main.elm
 
 Run "elm" for more commands.
@@ -47,14 +49,10 @@ Run "elm" for more commands.
 
 For **Linux**, **Mac**, and **Windows**, open a terminal and run:
 
-    curl https://raw.githubusercontent.com/simonewebdesign/elm-new/master/install.sh | sh
+    curl -L git.io/vX5cV | sh
 
 #### From npm
 
     npm install -g elm-new
 
-For other installation options, see [here](https://github.com/simonewebdesign/elm-new/blob/master/INSTALL.md).
-
----
-
-If you have an idea for making this tool better, please don't hesitate to open a [new issue](https://github.com/simonewebdesign/elm-new/issues/new)!
+See [here](https://github.com/simonewebdesign/elm-new/blob/master/INSTALL.md) for other installation options.
