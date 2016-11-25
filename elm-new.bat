@@ -4,17 +4,51 @@ setlocal EnableDelayedExpansion
 
 set choice=default
 set dest=.
+set synopsis=^
+
+Usage: elm-new [PATH] [OPTIONS]^
+
+Creates a new project with the specified options. The default is Html.program.^
+
+^
+
+Options:^
+
+  -b --beginner            Create an Html.beginnerProgram^
+
+  --hello-world            Create a "Hello, world!" program^
+
+  --navigation             Create a Navigation.program^
+
+  -h --help                Show this help text^
+
+  -V --version             Print version^
+
+^
+
+Examples^
+
+  elm new                        Create an Html.program in the current directory^
+
+  elm new my-project             Create an Html.program in my-project/^
+
+  elm new my-project --beginner  Create an Html.beginnerProgram in my-project/^
+
+  elm new my-spa --navigation    Create a Navigation.program in my-spa/^
+
+  elm new hello --hello-world    Create a `Hello world` program in hello/
+
 
 for %%a in (%*) do (
 
     set arg=%%a
 
     if %%a == --help (
-        echo usage: elm-new [path] [-b --beginner] [--hello-world] [--navigation] [-h --help] [-V --version]
+        echo !synopsis!
         exit /b
 
     ) else if %%a == -h (
-        echo usage: elm-new [path] [-b --beginner] [--hello-world] [--navigation] [-h --help] [-V --version]
+        echo !synopsis!
         exit /b
 
     ) else if %%a == --version (
@@ -39,7 +73,7 @@ for %%a in (%*) do (
 
     ) else if "!arg:~0,1!" == "-" (
         echo elm-new: illegal option !arg! 1>&2
-        echo usage: elm-new [path] [-b --beginner] [--hello-world] [--navigation] [-h --help] [-V --version]
+        echo !synopsis!
         exit /b 1
 
     ) else (
