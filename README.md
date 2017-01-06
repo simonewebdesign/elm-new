@@ -1,14 +1,17 @@
 # elm new [![Build Status](https://travis-ci.org/simonewebdesign/elm-new.svg?branch=master)](https://travis-ci.org/simonewebdesign/elm-new)
 
-A CLI tool that **generates a file hierarchy for starting a new Elm project**. Same as `mix new`, `rails new`, `lein new` etc.
+> Clojure has `lein new`, Elixir has `mix new` and now Elm has `elm new`! 
 
-The idea is to be able to start coding right away instead of wasting time with the initial boilerplate. This is especially useful if you do a lot of prototyping.
+With `elm new` you can easily **start a new Elm project from the command line**.
+
+The idea is to be able to start coding right away instead of wasting time setting up the initial Elm architecture boilerplate.
+This is especially useful if you do a lot of prototyping.
 
 ## Features
 
-- **Template based** — choose between `program`, `beginnerProgram` and `Navigation.program`
+- **Template based** — choose between `Html.program`, `Html.beginnerProgram` and `Navigation.program`
 - **No dependencies** — all you need is a shell (like bash, zsh, fish, etc.)
-- **Very simple** to install and use
+- **Very simple** to install and use. **100% test covered**. It just works!
 
 ## Usage
 
