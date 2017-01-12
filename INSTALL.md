@@ -1,7 +1,13 @@
 ## Installing from source
 
-1. Either clone this repository or download a release from the releases page.
-2. `cd` in the folder and run `sudo make install`.
+Have a look at [`install.sh`](https://github.com/simonewebdesign/elm-new/blob/master/install.sh), it contains all the steps to install elm-new in any Linux or OS X machine.
+
+Just open a terminal and run it:
+
+    curl https://raw.githubusercontent.com/simonewebdesign/elm-new/master/install.sh | sh
+
+If it didn't work for you, please let me know by opening a [new issue](https://github.com/simonewebdesign/elm-new/issues/new?title=Installation+issue&body=Please+write+here+about+the+problem+you+are+having+and+the+steps+to+reproduce+it.)!
+
 
 ### Installing in a custom directory (staged install)
 

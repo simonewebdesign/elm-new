@@ -1,6 +1,6 @@
 # elm new [![Build Status](https://travis-ci.org/simonewebdesign/elm-new.svg?branch=master)](https://travis-ci.org/simonewebdesign/elm-new)
 
-> Clojure has `lein new`, Elixir has `mix new` and now Elm has `elm new`! 
+> Clojure has `lein new`, Elixir has `mix new` and now Elm has `elm new`!
 
 With `elm new` you can easily **start a new Elm project from the command line**.
 
@@ -50,12 +50,16 @@ Run "elm" for more commands.
 
 ## Installation
 
-For **Linux**, **Mac**, and **Windows**, open a terminal and run:
+**Linux**, **Mac OS X** and **Windows** are supported.
 
-    curl -L git.io/vX5cV | sh
-
-#### From npm
+### npm
 
     npm install -g elm-new
+
+### Homebrew
+
+    brew install https://raw.githubusercontent.com/simonewebdesign/elm-new/master/elm-new.rb
+
+---
 
 See [here](https://github.com/simonewebdesign/elm-new/blob/master/INSTALL.md) for other installation options.
