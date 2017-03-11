@@ -7,7 +7,7 @@ function ok {
 }
 
 function fail {
-  echo -e ' \033[31mFAIL\033[0m'
+  echo -e ' \033[31m✗\033[0m'
   exit_status=1
 }
 
@@ -16,8 +16,8 @@ function test {
   echo -n "$1"
 }
 
-# Print debug info
-function debug {
+# Print group of tests title
+function group {
   echo -e "\n\033[2m*** $1\033[0m"
 }
 
@@ -58,7 +58,7 @@ if ! $cli --badarg >/dev/null 2>&1; then ok; else fail; fi
 
 
 sandbox
-debug "Running $cli with no args..."
+group "Running $cli with no args..."
 ../$cli >/dev/null
 
 test "elm-package.json exists"
@@ -82,7 +82,7 @@ if grep --quiet Html.program src/Main.elm; then ok; else fail; fi
 
 clean
 sandbox
-debug "Running $cli --beginner..."
+group "Running $cli --beginner..."
 ../$cli --beginner >/dev/null
 
 test "elm-package.json exists"
@@ -106,7 +106,7 @@ if grep --quiet Html.beginnerProgram src/Main.elm; then ok; else fail; fi
 
 clean
 sandbox
-debug "Running $cli --hello-world..."
+group "Running $cli --hello-world..."
 ../$cli --hello-world >/dev/null
 
 test "elm-package.json exists"
@@ -130,7 +130,7 @@ if grep --quiet "Hello, World!" src/Main.elm; then ok; else fail; fi
 
 clean
 sandbox
-debug "Running $cli somepath --hello-world --beginner..."
+group "Running $cli somepath --hello-world --beginner..."
 ../$cli somepath --hello-world --beginner >/dev/null
 
 test "elm-package.json exists"
@@ -154,7 +154,7 @@ if grep --quiet Html.beginnerProgram somepath/src/Main.elm; then ok; else fail; 
 
 clean
 sandbox
-debug "Running $cli --navigation nav..."
+group "Running $cli --navigation nav..."
 ../$cli --navigation nav >/dev/null
 
 test "elm-package.json exists"
