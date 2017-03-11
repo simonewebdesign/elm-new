@@ -11,4 +11,4 @@ before_script:
   - gem install coveralls
 
 script:
-  - bashcov --skip-uncovered -- ./test.sh bin/elm-new && coveralls push
+  - coveralls push
