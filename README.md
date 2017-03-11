@@ -1,4 +1,4 @@
-# elm new [![Build Status](https://travis-ci.org/simonewebdesign/elm-new.svg?branch=master)](https://travis-ci.org/simonewebdesign/elm-new)
+# elm new [![Build Status](https://travis-ci.org/simonewebdesign/elm-new.svg?branch=master)](https://travis-ci.org/simonewebdesign/elm-new) [![Coverage Status](https://coveralls.io/repos/github/simonewebdesign/elm-new/badge.svg?branch=master)](https://coveralls.io/github/simonewebdesign/elm-new?branch=master)
 
 > Clojure has `lein new`, Elixir has `mix new` and now Elm has `elm new`!
 
