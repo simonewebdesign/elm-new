@@ -60,6 +60,11 @@ Run "elm" for more commands.
 
     brew install https://raw.githubusercontent.com/simonewebdesign/elm-new/master/elm-new.rb
 
+### Git
+
+    git clone https://github.com/simonewebdesign/elm-new.git
+    cd elm-new && sudo make install
+
 ---
 
 See [here](https://github.com/simonewebdesign/elm-new/blob/master/INSTALL.md) for other installation options.
