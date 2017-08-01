@@ -70,3 +70,5 @@ Run "elm" for more commands.
 ---
 
 See [here](https://github.com/simonewebdesign/elm-new/blob/master/INSTALL.md) for other installation options.
+
+CI Test
