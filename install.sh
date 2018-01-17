@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Download and unpack
 curl https://codeload.github.com/simonewebdesign/elm-new/tar.gz/v1.3.0 > elm-new.tar.gz
