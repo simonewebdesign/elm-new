@@ -14,11 +14,11 @@ Options:
   -V --version             Print version
 
 Examples:
-  elm new                        Create an Html.program in the current directory
-  elm new my-project             Create an Html.program in my-project/
-  elm new my-project --beginner  Create an Html.beginnerProgram in my-project/
-  elm new my-spa --navigation    Create a Navigation.program in my-spa/
-  elm new hello --hello-world    Create a "Hello, world!" program in hello/
+  elm-new                        Create an Html.program in the current directory
+  elm-new my-project             Create an Html.program in my-project/
+  elm-new my-project --beginner  Create an Html.beginnerProgram in my-project/
+  elm-new my-spa --navigation    Create a Navigation.program in my-spa/
+  elm-new hello --hello-world    Create a "Hello, world!" program in hello/
 '
 
 for arg in "$@"; do
@@ -68,9 +68,9 @@ tree -a "$path" 2>/dev/null
 
 echo '
 Your Elm program has been created successfully.
-You can use "elm-make" to compile it:
+You can use "elm make" to compile it:
 
-    elm-make src/Main.elm
+    elm make src/Main.elm
 
 Run "elm" for more commands.
 '
