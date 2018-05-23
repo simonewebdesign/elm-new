@@ -28,15 +28,15 @@ Options:^
 
 Examples^
 
-  elm new                        Create an Html.program in the current directory^
+  elm-new                        Create an Html.program in the current directory^
 
-  elm new my-project             Create an Html.program in my-project/^
+  elm-new my-project             Create an Html.program in my-project/^
 
-  elm new my-project --beginner  Create an Html.beginnerProgram in my-project/^
+  elm-new my-project --beginner  Create an Html.beginnerProgram in my-project/^
 
-  elm new my-spa --navigation    Create a Navigation.program in my-spa/^
+  elm-new my-spa --navigation    Create a Navigation.program in my-spa/^
 
-  elm new hello --hello-world    Create a `Hello world` program in hello/
+  elm-new hello --hello-world    Create a `Hello world` program in hello/
 
 
 for %%a in (%*) do (
@@ -85,9 +85,9 @@ robocopy %~dp0\share\elm-new\%choice% "%dest%" /e >nul 2>&1
 
 echo Your Elm program has been created successfully.
 echo.
-echo You can use "elm-make" to compile it:
+echo You can use "elm make" to compile it:
 echo.
-echo     elm-make src/Main.elm
+echo     elm make src/Main.elm
 echo.
 echo Run "elm" for more commands.
 

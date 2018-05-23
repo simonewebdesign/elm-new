@@ -1,4 +1,4 @@
-# elm new
+# elm-new
 
 [![Build Status](https://travis-ci.org/simonewebdesign/elm-new.svg?branch=master)](https://travis-ci.org/simonewebdesign/elm-new) [![Build Status](https://ci.appveyor.com/api/projects/status/5jqfyredn4l7rxtv?svg=true)](https://ci.appveyor.com/project/simone/elm-new)
 
@@ -18,19 +18,19 @@ This is especially useful if you do a lot of prototyping.
 ## Usage
 
 ```bash
-elm new                        # Initialize an Html.program in the current directory
-elm new my-project             # Initialize an Html.program in my-project/
-elm new my-project --beginner  # Initialize an Html.beginnerProgram in my-project/
-elm new my-spa --navigation    # Initialize a Navigation.program in my-spa/
-elm new hello --hello-world    # Initialize an "Hello, world!" program in hello/
-elm new --version              # Prints the installed version
-elm new --help                 # Prints all possible commands
+elm-new                        # Initialize an Html.program in the current directory
+elm-new my-project             # Initialize an Html.program in my-project/
+elm-new my-project --beginner  # Initialize an Html.beginnerProgram in my-project/
+elm-new my-spa --navigation    # Initialize a Navigation.program in my-spa/
+elm-new hello --hello-world    # Initialize an "Hello, world!" program in hello/
+elm-new --version              # Prints the installed version
+elm-new --help                 # Prints all possible commands
 ```
 
 ## Example
 
 ```
-$ elm new my-awesome-project
+$ elm-new my-awesome-project
 
 my-awesome-project
 ├── .gitignore
@@ -42,10 +42,10 @@ my-awesome-project
 1 directory, 4 files
 
 Your Elm program has been created successfully.
-You can use "elm-make" to compile it:
+You can use "elm make" to compile it:
 
     cd my-awesome-project
-    elm-make src/Main.elm
+    elm make src/Main.elm
 
 Run "elm" for more commands.
 ```
