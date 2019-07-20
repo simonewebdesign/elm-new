@@ -70,3 +70,13 @@ Run "elm" for more commands.
 ---
 
 See [here](https://github.com/simonewebdesign/elm-new/blob/master/INSTALL.md) for other installation options.
+
+---
+
+## Contributing
+
+Contributors are welcome! Just fork this repo and start hacking away.
+
+`elm-new` only supports Elm 0.16, 0.17 and 0.18 at this time. There is a branch, `elm-0.19`, which has ~80% of the work already done to support Elm 0.19, but I never got around to finishing it (it's only missing the new templates really, the big job is pretty much done). So if you can contribute to `elm-new` with your own templates, please do!
+
+Make sure to check out [CONTRIBUTING.md](https://github.com/simonewebdesign/elm-new/blob/master/CONTRIBUTING.md) to get started.
