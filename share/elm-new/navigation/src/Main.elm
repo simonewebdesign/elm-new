@@ -6,7 +6,7 @@ import Navigation
 
 main : Program Never Model Msg
 main =
-    Navigation.program UrlChange
+    Browser.application UrlChange
         { init = init
         , view = view
         , update = update
