@@ -79,8 +79,8 @@ if [ -d src ]; then ok; else fail; fi
 test "src/Main.elm exists"
 if [ -f src/Main.elm ]; then ok; else fail; fi
 
-test "It's an Html.program"
-if grep --quiet Html.program src/Main.elm; then ok; else fail; fi
+test "It's a Browser.document"
+if grep --quiet Browser.document src/Main.elm; then ok; else fail; fi
 
 
 clean
@@ -103,8 +103,8 @@ if [ -d src ]; then ok; else fail; fi
 test "src/Main.elm exists"
 if [ -f src/Main.elm ]; then ok; else fail; fi
 
-test "It's an Html.beginnerProgram"
-if grep --quiet Html.beginnerProgram src/Main.elm; then ok; else fail; fi
+test "It's a Browser.sandbox"
+if grep --quiet Browser.sandbox src/Main.elm; then ok; else fail; fi
 
 
 clean
@@ -151,8 +151,8 @@ if [ -d somepath/src ]; then ok; else fail; fi
 test "src/Main.elm exists"
 if [ -f somepath/src/Main.elm ]; then ok; else fail; fi
 
-test "It's an Html.beginnerProgram"
-if grep --quiet Html.beginnerProgram somepath/src/Main.elm; then ok; else fail; fi
+test "It's a Browser.sandbox"
+if grep --quiet Browser.sandbox somepath/src/Main.elm; then ok; else fail; fi
 
 
 clean
@@ -175,8 +175,8 @@ if [ -d nav/src ]; then ok; else fail; fi
 test "src/Main.elm exists"
 if [ -f nav/src/Main.elm ]; then ok; else fail; fi
 
-test "It's a Navigation.program"
-if grep --quiet Navigation.program nav/src/Main.elm; then ok; else fail; fi
+test "It's a Browser.application"
+if grep --quiet Browser.application nav/src/Main.elm; then ok; else fail; fi
 
 
 clean

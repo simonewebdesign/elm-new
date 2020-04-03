@@ -5,7 +5,7 @@ import Html exposing (..)
 
 main : Program Never Model Msg
 main =
-    Html.program
+    Browser.document
         { init = init
         , view = view
         , update = update

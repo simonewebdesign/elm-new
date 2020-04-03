@@ -11,20 +11,24 @@ This is especially useful if you do a lot of prototyping.
 
 ## Features
 
-- **Template based** — choose between `Html.program`, `Html.beginnerProgram` and `Navigation.program`
-- **No dependencies** — all you need is a shell (like bash, zsh, fish, etc.)
-- **Very simple** to install and use. **100% test covered**. It just works!
+You can choose between a few templates:
+
+- [**sandbox**](https://package.elm-lang.org/packages/elm/browser/latest/Browser#sandbox) - good for learning about the Elm Architecture
+- [**element**](https://package.elm-lang.org/packages/elm/browser/latest/Browser#element) - an Elm application embedded in an HTML element
+- [**document**](https://package.elm-lang.org/packages/elm/browser/latest/Browser#document) - an application that has control over the full HTML document
+- [**application**](https://package.elm-lang.org/packages/elm/browser/latest/Browser#application) - a single-page app
+
 
 ## Usage
 
 ```bash
-elm-new                        # Initialize an Html.program in the current directory
-elm-new my-project             # Initialize an Html.program in my-project/
-elm-new my-project --beginner  # Initialize an Html.beginnerProgram in my-project/
-elm-new my-spa --navigation    # Initialize a Navigation.program in my-spa/
-elm-new hello --hello-world    # Initialize an "Hello, world!" program in hello/
-elm-new --version              # Prints the installed version
-elm-new --help                 # Prints all possible commands
+elm new                        # Initialize a Browser.document in the current directory
+elm new my-project             # Initialize a Browser.document in my-project/
+elm new my-project --beginner  # Initialize a Browser.sandbox in my-project/
+elm new my-spa --navigation    # Initialize a Browser.application in my-spa/
+elm new hello --hello-world    # Initialize a "Hello, world!" program in hello/
+elm new --version              # Prints the installed version
+elm new --help                 # Prints all possible commands
 ```
 
 ## Example

@@ -9,7 +9,7 @@ set synopsis=^
 
 Usage: elm-new [PATH] [OPTIONS]^
 
-Creates a new project with the specified options. The default is Html.program.^
+Creates a new project with the specified options. The default is Browser.document.^
 
 ^
 
@@ -17,11 +17,11 @@ Options:^
 
   -p --package             Create a new package instead of an application
 
-  -b --beginner            Create an Html.beginnerProgram^
+  -b --beginner            Create a Browser.sandbox^
 
   --hello-world            Create a "Hello, world!" program^
 
-  --navigation             Create a Navigation.program^
+  --navigation             Create a Browser.application^
 
   -h --help                Show this help text^
 
@@ -31,13 +31,13 @@ Options:^
 
 Examples^
 
-  elm-new                        Create an Html.program in the current directory^
+  elm new                        Create a Browser.document in the current directory^
 
-  elm-new my-project             Create an Html.program in my-project/^
+  elm new my-project             Create a Browser.document in my-project/^
 
-  elm-new my-project --beginner  Create an Html.beginnerProgram in my-project/^
+  elm new my-project --beginner  Create a Browser.sandbox in my-project/^
 
-  elm-new my-spa --navigation    Create a Navigation.program in my-spa/^
+  elm new my-spa --navigation    Create a Browser.application in my-spa/^
 
   elm-new hello --hello-world    Create a `Hello world` program in hello/
 

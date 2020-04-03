@@ -14,16 +14,16 @@ The
 utility creates a directory tree in the provided
 .Ar path
 , or in the current directory by default.
-The generated project will be using Html.program
+The generated project will be using Browser.document
 if no options provided.
 .Sh OPTIONS
 .Bl -tag -width indent
 .It Fl b, -beginner
-Generates an Elm program using Html.beginnerProgram.
+Generates an Elm program using Browser.sandbox.
 .It Fl -hello-world
 Generates an Elm program that prints "Hello, world!".
 .It Fl -navigation
-Generates an Elm program using Navigation.program from elm-lang/navigation.
+Generates an Elm program using Browser.application from elm-lang/navigation.
 .It Fl h, -help
 Prints the synopsis.
 .It Fl V, -version

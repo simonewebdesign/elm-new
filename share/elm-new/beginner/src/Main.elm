@@ -5,7 +5,7 @@ import Html exposing (..)
 
 main : Program Never Model Msg
 main =
-    Html.beginnerProgram
+    Browser.sandbox
         { model = initialModel
         , view = view
         , update = update
