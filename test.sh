@@ -61,8 +61,11 @@ sandbox
 group "Running $cli with no args..."
 ../$cli >/dev/null
 
-test "elm-package.json exists"
-if [ -f elm-package.json ]; then ok; else fail; fi
+test "elm.json exists"
+if [ -f elm.json ]; then ok; else fail; fi
+
+test "It's an application"
+if grep --quiet application elm.json; then ok; else fail; fi
 
 test "README.md exists"
 if [ -f README.md ]; then ok; else fail; fi
@@ -85,8 +88,8 @@ sandbox
 group "Running $cli --beginner..."
 ../$cli --beginner >/dev/null
 
-test "elm-package.json exists"
-if [ -f elm-package.json ]; then ok; else fail; fi
+test "elm.json exists"
+if [ -f elm.json ]; then ok; else fail; fi
 
 test "README.md exists"
 if [ -f README.md ]; then ok; else fail; fi
@@ -109,8 +112,8 @@ sandbox
 group "Running $cli --hello-world..."
 ../$cli --hello-world >/dev/null
 
-test "elm-package.json exists"
-if [ -f elm-package.json ]; then ok; else fail; fi
+test "elm.json exists"
+if [ -f elm.json ]; then ok; else fail; fi
 
 test "README.md exists"
 if [ -f README.md ]; then ok; else fail; fi
@@ -133,8 +136,8 @@ sandbox
 group "Running $cli somepath --hello-world --beginner..."
 ../$cli somepath --hello-world --beginner >/dev/null
 
-test "elm-package.json exists"
-if [ -f somepath/elm-package.json ]; then ok; else fail; fi
+test "elm.json exists"
+if [ -f somepath/elm.json ]; then ok; else fail; fi
 
 test "README.md exists"
 if [ -f somepath/README.md ]; then ok; else fail; fi
@@ -157,8 +160,8 @@ sandbox
 group "Running $cli --navigation nav..."
 ../$cli --navigation nav >/dev/null
 
-test "elm-package.json exists"
-if [ -f nav/elm-package.json ]; then ok; else fail; fi
+test "elm.json exists"
+if [ -f nav/elm.json ]; then ok; else fail; fi
 
 test "README.md exists"
 if [ -f nav/README.md ]; then ok; else fail; fi
@@ -174,6 +177,31 @@ if [ -f nav/src/Main.elm ]; then ok; else fail; fi
 
 test "It's a Navigation.program"
 if grep --quiet Navigation.program nav/src/Main.elm; then ok; else fail; fi
+
+
+clean
+sandbox
+group "Running $cli --package mylib..."
+../$cli --package mylib >/dev/null
+
+test "elm.json exists"
+if [ -f mylib/elm.json ]; then ok; else fail; fi
+
+test "It's a package"
+if grep --quiet package mylib/elm.json; then ok; else fail; fi
+
+test "README.md exists"
+if [ -f mylib/README.md ]; then ok; else fail; fi
+
+test ".gitignore exists"
+if [ -f mylib/.gitignore ]; then ok; else fail; fi
+
+test "src/ exists"
+if [ -d mylib/src ]; then ok; else fail; fi
+
+test "src/Main.elm exists"
+if [ -f mylib/src/Main.elm ]; then ok; else fail; fi
+
 
 clean
 
