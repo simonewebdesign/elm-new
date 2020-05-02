@@ -1,12 +1,14 @@
 import Html exposing (..)
+import Debug exposing (toString)
+import Browser
 --import Html.Attributes exposing (..)
 --import Html.Events exposing (onClick)
 
 
-main : Program Never Model Msg
+main : Program () Model Msg
 main =
     Browser.sandbox
-        { model = initialModel
+        { init = initialModel
         , view = view
         , update = update
         }
