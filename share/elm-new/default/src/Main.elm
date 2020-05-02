@@ -1,13 +1,15 @@
 import Html exposing (..)
+import Debug exposing (toString)
+import Browser
 --import Html.Attributes exposing (..)
 --import Html.Events exposing (onClick)
 
 
-main : Program Never Model Msg
+main : Program () Model Msg
 main =
     Browser.document
         { init = init
-        , view = view
+        , view = \model -> { title = "My Elm Document", body = [view model] }
         , update = update
         , subscriptions = subscriptions
         }
@@ -26,8 +28,8 @@ initialModel =
     {}
 
 
-init : ( Model, Cmd Msg )
-init =
+init : flags -> ( Model, Cmd Msg )
+init flags =
     ( initialModel, Cmd.none )
 
 
