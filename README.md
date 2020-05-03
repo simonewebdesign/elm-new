@@ -16,10 +16,10 @@ This is especially useful if you do a lot of prototyping.
 
 Simply choose between:
 
-- [**sandbox**](https://package.elm-lang.org/packages/elm/browser/latest/Browser#sandbox) - good for learning about the Elm Architecture
-- [**element**](https://package.elm-lang.org/packages/elm/browser/latest/Browser#element) - an Elm application embedded in an HTML element
-- [**document**](https://package.elm-lang.org/packages/elm/browser/latest/Browser#document) - an application that has control over the full HTML document
-- [**application**](https://package.elm-lang.org/packages/elm/browser/latest/Browser#application) - a single-page app
+- [**sandbox**](https://package.elm-lang.org/packages/elm/browser/latest/Browser#sandbox) — good for learning about the Elm Architecture
+- [**element**](https://package.elm-lang.org/packages/elm/browser/latest/Browser#element) — an Elm application embedded in an HTML element
+- [**document**](https://package.elm-lang.org/packages/elm/browser/latest/Browser#document) — an application that has control over the full HTML document
+- [**application**](https://package.elm-lang.org/packages/elm/browser/latest/Browser#application) — a single-page app
 
 
 ## Usage
@@ -80,22 +80,22 @@ See [here](https://github.com/simonewebdesign/elm-new/blob/master/INSTALL.md) fo
 
 ---
 
-### Support for older versions
+### Support for older Elm versions
 
 Older versions of Elm are also supported:
 
-- Elm 0.16 => elm-new v0.1.0
-- Elm 0.17 => elm-new v1.1.3
-- Elm 0.18 => elm-new v1.3.0
 - Elm 0.19 => elm-new v2.0.0+
+- Elm 0.18 => elm-new v1.3.0
+- Elm 0.17 => elm-new v1.1.3
+- Elm 0.16 => elm-new v0.1.0
 
-So for example, if you're using Elm 0.18, you'll want to grab elm-new v1.3. You can try installing it via `brew` or `npm`, or download it straight from the [releases](https://github.com/simonewebdesign/elm-new/releases) page.
+So, for example, if you're using Elm 0.18, you'll want to grab elm-new v1.3.0. You can either install it via `brew` or `npm`, or download it straight from the [releases](https://github.com/simonewebdesign/elm-new/releases) page.
 
 The choices also differ depending on the Elm version. For example, for Elm 0.18 you could choose between:
 
-- `Html.program` - the default. Run: `elm-new my-project`
-- `Html.beginnerProgram` - good for learning. Run: `elm-new my-project --beginner`
-- `Navigation.program` - SPA with routing. Run: `elm-new my-project --navigation`
+- [`Html.program`](https://package.elm-lang.org/packages/elm-lang/html/1.1.0/Html-App#program) — the default. Run: `elm-new my-project-name`
+- [`Html.beginnerProgram`](https://package.elm-lang.org/packages/elm-lang/html/1.1.0/Html-App#beginnerProgram) — good for learning. Run: `elm-new my-project --beginner`
+- [`Navigation.program`](https://package.elm-lang.org/packages/elm-lang/navigation/2.1.0/Navigation#program) — SPA with routing. Run: `elm-new my-project --navigation`
 
 ---
 
