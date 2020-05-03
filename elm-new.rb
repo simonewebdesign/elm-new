@@ -6,6 +6,8 @@ class ElmNew < Formula
 
   def install
     system "make", "install", "PREFIX=#{prefix}"
+
+    fish_completion.install "elm-new.fish"
   end
 
   test do
