@@ -22,13 +22,13 @@ You can choose between a few templates:
 ## Usage
 
 ```bash
-elm new                        # Initialize a Browser.document in the current directory
-elm new my-project             # Initialize a Browser.document in my-project/
-elm new my-project --beginner  # Initialize a Browser.sandbox in my-project/
-elm new my-spa --navigation    # Initialize a Browser.application in my-spa/
-elm new hello --hello-world    # Initialize a "Hello, world!" program in hello/
-elm new --version              # Prints the installed version
-elm new --help                 # Prints all possible commands
+elm-new                        # Initialize a Browser.document in the current directory
+elm-new my-project             # Initialize a Browser.document in my-project/
+elm-new my-project --beginner  # Initialize a Browser.sandbox in my-project/
+elm-new my-spa --navigation    # Initialize a Browser.application in my-spa/
+elm-new hello --hello-world    # Initialize a "Hello, world!" program in hello/
+elm-new --version              # Prints the installed version
+elm-new --help                 # Prints all possible commands
 ```
 
 ## Example
@@ -39,7 +39,7 @@ $ elm-new my-awesome-project
 my-awesome-project
 ├── .gitignore
 ├── README.md
-├── elm-package.json
+├── elm.json
 └── src
     └── Main.elm
 

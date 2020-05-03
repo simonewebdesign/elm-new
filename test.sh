@@ -180,29 +180,5 @@ if grep --quiet Browser.application nav/src/Main.elm; then ok; else fail; fi
 
 
 clean
-sandbox
-group "Running $cli --package mylib..."
-../$cli --package mylib >/dev/null
-
-test "elm.json exists"
-if [ -f mylib/elm.json ]; then ok; else fail; fi
-
-test "It's a package"
-if grep --quiet package mylib/elm.json; then ok; else fail; fi
-
-test "README.md exists"
-if [ -f mylib/README.md ]; then ok; else fail; fi
-
-test ".gitignore exists"
-if [ -f mylib/.gitignore ]; then ok; else fail; fi
-
-test "src/ exists"
-if [ -d mylib/src ]; then ok; else fail; fi
-
-test "src/Main.elm exists"
-if [ -f mylib/src/Main.elm ]; then ok; else fail; fi
-
-
-clean
 
 exit $exit_status

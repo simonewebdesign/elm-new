@@ -3,7 +3,6 @@
 setlocal EnableDelayedExpansion
 
 set choice=default
-set elmtype=application
 set dest=.
 set synopsis=^
 
@@ -14,8 +13,6 @@ Creates a new project with the specified options. The default is Browser.documen
 ^
 
 Options:^
-
-  -p --package             Create a new package instead of an application
 
   -b --beginner            Create a Browser.sandbox^
 
@@ -31,17 +28,15 @@ Options:^
 
 Examples^
 
-  elm new                        Create a Browser.document in the current directory^
+  elm-new                        Create a Browser.document in the current directory^
 
-  elm new my-project             Create a Browser.document in my-project/^
+  elm-new my-project             Create a Browser.document in my-project/^
 
-  elm new my-project --beginner  Create a Browser.sandbox in my-project/^
+  elm-new my-project --beginner  Create a Browser.sandbox in my-project/^
 
-  elm new my-spa --navigation    Create a Browser.application in my-spa/^
+  elm-new my-spa --navigation    Create a Browser.application in my-spa/^
 
   elm-new hello --hello-world    Create a `Hello world` program in hello/
-
-  elm new --package              Create a new package
 
 
 for %%a in (%*) do (
@@ -76,12 +71,6 @@ for %%a in (%*) do (
     ) else if %%a == --navigation (
         set choice=navigation
 
-    ) else if %%a == --package (
-        set elmtype=package
-
-    ) else if %%a == -p (
-        set elmtype=package
-
     ) else if "!arg:~0,1!" == "-" (
         echo elm-new: illegal option !arg! 1>&2
         echo !synopsis!
@@ -93,7 +82,6 @@ for %%a in (%*) do (
 )
 
 robocopy %~dp0\share\elm-new\%choice% "%dest%" /e >nul 2>&1
-robocopy %~dp0\share\elm-new\%elmtype% "%dest%" /e >nul 2>&1
 
 echo Your Elm program has been created successfully.
 echo.
