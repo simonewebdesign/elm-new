@@ -1,14 +1,12 @@
 #!/usr/bin/env bash
 
 choice=default
-type=application
 path=.
 synopsis='
 Usage: elm-new [PATH] [OPTIONS]
 Creates a new project with the specified options. The default is Browser.document.
 
 Options:
-  -p --package             Create a new package instead of an application
   -b --beginner            Create a Browser.sandbox
   --hello-world            Create a "Hello, world!" program
   --navigation             Create a Browser.application
@@ -16,12 +14,12 @@ Options:
   -V --version             Print version
 
 Examples:
-  elm new                        Create a Browser.document in the current directory
-  elm new my-project             Create a Browser.document in my-project/
-  elm new my-project --beginner  Create a Browser.sandbox in my-project/
-  elm new my-spa --navigation    Create a Browser.application in my-spa/
-  elm new hello --hello-world    Create a "Hello, world!" program in hello/
-  elm new --package              Create a new package
+  elm-new                        Create a Browser.document in the current directory
+  elm-new my-project             Create a Browser.document in my-project/
+  elm-new my-project --beginner  Create a Browser.sandbox in my-project/
+  elm-new my-spa --navigation    Create a Browser.application in my-spa/
+  elm-new hello --hello-world    Create a "Hello, world!" program in hello/
+  elm-new --package              Create a new package
 '
 
 for arg in "$@"; do
@@ -52,11 +50,6 @@ for arg in "$@"; do
       shift
       ;;
 
-    -p|--package)
-      type=package
-      shift
-      ;;
-
     -*)
       >&2 echo "elm-new: illegal option $arg"
       echo "$synopsis"
@@ -71,7 +64,6 @@ done
 
 mkdir -p "$path"
 cp -R "${0%/*}/../share/elm-new/$choice/". "$path"
-cp -R "${0%/*}/../share/elm-new/$type/". "$path"
 
 tree -a "$path" 2>/dev/null
 
