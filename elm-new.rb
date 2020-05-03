@@ -8,6 +8,7 @@ class ElmNew < Formula
     system "make", "install", "PREFIX=#{prefix}"
 
     fish_completion.install "elm-new.fish"
+    zsh_completion.install "elm-new.zsh" => "_elm-new"
   end
 
   test do
