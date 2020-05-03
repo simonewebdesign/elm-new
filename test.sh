@@ -41,10 +41,10 @@ test "prints help (--help)"
 if [[ $($cli --help) =~ Usage: ]]; then ok; else fail; fi
 
 test "prints version (-V)"
-if [ "$($cli -V)" == 1.3.0 ]; then ok; else fail; fi
+if [ "$($cli -V)" == 2.0.0 ]; then ok; else fail; fi
 
 test "prints version (--version)"
-if [ "$($cli --version)" == 1.3.0 ]; then ok; else fail; fi
+if [ "$($cli --version)" == 2.0.0 ]; then ok; else fail; fi
 
 echo When invalid arg provided,
 test "    prints to stderr"
