@@ -1,16 +1,20 @@
+import Browser
+import Browser.Navigation as Nav
 import Html exposing (..)
 import Html.Attributes exposing (..)
 --import Html.Events exposing (..)
-import Navigation
+import Url
 
 
-main : Program Never Model Msg
+main : Program () Model Msg
 main =
-    Browser.application UrlChange
+    Browser.application
         { init = init
-        , view = view
+        , view = \model -> { title = "My Elm Document", body = [view model] }
         , update = update
         , subscriptions = (\_ -> Sub.none)
+        , onUrlRequest = LinkClick
+        , onUrlChange = UrlChange
         }
 
 
@@ -19,15 +23,20 @@ main =
 
 
 type alias Model =
-    { history : List Navigation.Location
+    { history : List Url.Url
+    , navKey : Nav.Key
     }
 
 
-init : Navigation.Location -> ( Model, Cmd Msg )
-init location =
-    ( Model [ location ]
-    , Cmd.none
-    )
+init : flags -> Url.Url -> Nav.Key -> ( Model, Cmd Msg )
+init flags url key =
+    let
+        model =
+            { navKey = key
+            , history = [ url ]
+            }
+    in
+    ( model, Cmd.none )
 
 
 
@@ -35,21 +44,23 @@ init location =
 
 
 type Msg
-    = UrlChange Navigation.Location
+    = LinkClick Browser.UrlRequest
+    | UrlChange Url.Url
 
 
-{- We are just storing the location in our history in this example, but
-normally, you would use a package like evancz/url-parser to parse the path
-or hash into nicely structured Elm values.
-
-    <http://package.elm-lang.org/packages/evancz/url-parser/latest>
-
--}
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        UrlChange location ->
-            ( { model | history = location :: model.history }
+        LinkClick urlRequest ->
+            case urlRequest of
+                Browser.Internal url ->
+                    ( model, Nav.pushUrl model.navKey (Url.toString url) )
+
+                Browser.External href ->
+                    ( model, Nav.load href )
+
+        UrlChange url ->
+            ( { model | history = url :: model.history }
             , Cmd.none
             )
 
@@ -73,6 +84,9 @@ viewLink name =
     li [] [ a [ href ("#" ++ name) ] [ text name ] ]
 
 
-viewLocation : Navigation.Location -> Html msg
+viewLocation : Url.Url -> Html msg
 viewLocation location =
-    li [] [ text (location.pathname ++ location.hash) ]
+    let
+        fragment = Maybe.withDefault "index (no page selected)" location.fragment
+    in
+    li [] [ text fragment ]
