@@ -19,7 +19,6 @@ Examples:
   elm-new my-project --beginner  Create a Browser.sandbox in my-project/
   elm-new my-spa --navigation    Create a Browser.application in my-spa/
   elm-new hello --hello-world    Create a "Hello, world!" program in hello/
-  elm-new --package              Create a new package
 '
 
 for arg in "$@"; do
