@@ -11,7 +11,10 @@ This is especially useful if you do a lot of prototyping.
 
 ## Features
 
-You can choose between a few templates:
+- **No dependencies** — all you need is a shell (like bash, zsh, fish, etc.)
+- **Very simple** to install and use. **100% test covered**. It just works!
+
+Simply choose between:
 
 - [**sandbox**](https://package.elm-lang.org/packages/elm/browser/latest/Browser#sandbox) - good for learning about the Elm Architecture
 - [**element**](https://package.elm-lang.org/packages/elm/browser/latest/Browser#element) - an Elm application embedded in an HTML element
@@ -77,10 +80,27 @@ See [here](https://github.com/simonewebdesign/elm-new/blob/master/INSTALL.md) fo
 
 ---
 
+### Support for older versions
+
+Older versions of Elm are also supported:
+
+- Elm 0.16 => elm-new v0.1.0
+- Elm 0.17 => elm-new v1.1.3
+- Elm 0.18 => elm-new v1.3.0
+- Elm 0.19 => elm-new v2.0.0+
+
+So for example, if you're using Elm 0.18, you'll want to grab elm-new v1.3. You can try installing it via `brew` or `npm`, or download it straight from the [releases](https://github.com/simonewebdesign/elm-new/releases) page.
+
+The choices also differ depending on the Elm version. For example, for Elm 0.18 you could choose between:
+
+- `Html.program` - the default. Run: `elm-new my-project`
+- `Html.beginnerProgram` - good for learning. Run: `elm-new my-project --beginner`
+- `Navigation.program` - SPA with routing. Run: `elm-new my-project --navigation`
+
+---
+
 ## Contributing
 
 Contributors are welcome! Just fork this repo and start hacking away.
-
-`elm-new` only supports Elm 0.16, 0.17 and 0.18 at this time. There is a branch, `elm-0.19`, which has ~80% of the work already done to support Elm 0.19, but I never got around to finishing it (it's only missing the new templates really, the big job is pretty much done). So if you can contribute to `elm-new` with your own templates, please do!
 
 Make sure to check out [CONTRIBUTING.md](https://github.com/simonewebdesign/elm-new/blob/master/CONTRIBUTING.md) to get started.
