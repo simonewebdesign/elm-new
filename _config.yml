@@ -1,0 +1,8 @@
+title: elm new
+description: Command line tool to generate a new Elm project's basic structure
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-cayman
+
+gems:
+  - jekyll-mentions
