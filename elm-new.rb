@@ -1,8 +1,9 @@
 class ElmNew < Formula
+  version '2.0.0'
   desc "Creates a new Elm project's basic structure"
   homepage "https://simonewebdesign.github.io/elm-new/"
-  url "https://github.com/simonewebdesign/elm-new/archive/v1.3.0.tar.gz"
-  sha256 "5b9978079136fd2f6db611b7d6825c68f3055efc642341737d92a93a501c2b5a"
+  url "https://github.com/simonewebdesign/elm-new/archive/v2.0.0.tar.gz"
+  sha256 "412bbcc7d4c01f233e92def5dcffb7287f38f42b78ddcff1d5aa2b55773cd7e2"
 
   def install
     system "make", "install", "PREFIX=#{prefix}"
