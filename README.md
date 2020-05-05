@@ -12,7 +12,8 @@ This is especially useful if you do a lot of prototyping.
 ## Features
 
 - **No dependencies** — all you need is a shell (like bash, zsh, fish, etc.)
-- **Very simple** to install and use. **100% test covered**. It just works!
+- **Very simple** to install and use. Auto-completion included.
+- **100% test covered**. It just works!
 
 Simply choose between:
 
