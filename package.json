@@ -2,7 +2,9 @@
   "name": "elm-new",
   "version": "2.0.0",
   "description": "Generates a project scaffolding for rapid prototyping of Elm apps.",
+  "os": [ "darwin", "linux", "win32" ],
   "main": "index.js",
+  "man": "./share/man/man1/elm-new.1",
   "bin": {
     "elm-new": "./index.js"
   },
