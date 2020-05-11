@@ -66,6 +66,10 @@ Run "elm" for more commands.
 
     npm install -g elm-new
 
+### yarn
+
+    yarn global add elm-new
+
 ### Homebrew
 
     brew install https://raw.githubusercontent.com/simonewebdesign/elm-new/master/elm-new.rb
