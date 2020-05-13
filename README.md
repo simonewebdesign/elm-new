@@ -72,11 +72,11 @@ Run "elm" for more commands.
 
 ### Homebrew
 
-    brew install https://raw.githubusercontent.com/simonewebdesign/elm-new/master/elm-new.rb
+    brew install simonewebdesign/tap/elm-new
 
 ### Git
 
-    git clone https://github.com/simonewebdesign/elm-new.git
+    git clone https://github.com/simonewebdesign/elm-new
     cd elm-new && sudo make install
 
 ---
