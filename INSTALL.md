@@ -36,7 +36,7 @@ You don't need to clone or download this repo. Just open cmd.exe and run:
     powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/simonewebdesign/elm-new/master/install.bat', '%temp%\install.bat')"
     %temp%\install.bat
 
-It will install the tool under `C:\Tools\elm-new`. If you want to just call the tool without specifying the full path, you need to add that path in your your PATH environment variable: here's a [guide](http://www.computerhope.com/issues/ch000549.htm).
+It will install the tool under `C:\Tools\elm-new`. If you want to just call the tool without specifying the full path, you need to add that path in your PATH environment variable: here's a [guide](http://www.computerhope.com/issues/ch000549.htm).
 
 The tool will also just work on *MinGW*; it can be installed normally as described in the [README](https://github.com/simonewebdesign/elm-new#installation), or from source (see above).
 
