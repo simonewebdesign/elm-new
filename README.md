@@ -71,6 +71,10 @@ Run "elm" for more commands.
 
     yarn global add elm-new
 
+### Chocolatey
+
+    choco install elm-new
+
 ### Homebrew
 
     brew install simonewebdesign/tap/elm-new
